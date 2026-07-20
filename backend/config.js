@@ -17,7 +17,7 @@ const CONFIG = {
   cities: "Delhi & NCR",
 
   // Which port the server listens on.
-  port: 3000,
+  port: process.env.PORT || 3000,
 
   // OTP login (see auth.js). While this is true, the "send OTP"
   // API also hands the code back in its response, so you can test
