@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="ROZVIK™ — Premium nuts, dry fruit ladoos & handmade chocolates in borosilicate glass jars.">
+<meta name="theme-color" content="#1A3520">
+<meta property="og:title" content="ROZVIK™ — Pure. Premium. Handcrafted.">
+<meta property="og:description" content="Premium nuts, dry fruit ladoos & handmade chocolates. Packed in borosilicate glass jars. Delivered to Delhi & NCR.">
+<title>ROZVIK™ — Pure. Premium. Handcrafted.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="hdr" role="banner">
+  <div class="logo" onclick="goTo('hero')">
+    <div class="logo-ring"><i class="ti ti-leaf"></i></div>
+    <div><div class="logo-name">ROZVIK</div><div class="logo-tag">PURE. PREMIUM. HANDCRAFTED.</div></div>
+  </div>
+  <nav class="hnav">
+    <button onclick="goTo('shop')">Shop</button>
+    <button onclick="goTo('glass-section')">Why Glass Jars</button>
+    <button onclick="goTo('story')">Our Story</button>
+    <button onclick="showAuth()">Order Now</button>
+  </nav>
+  <div class="hright">
+    <button class="hico" onclick="showAuth()" title="Account"><i class="ti ti-user"></i></button>
+    <button class="hico" onclick="toggleCart()" title="Bag">
+      <i class="ti ti-shopping-bag"></i>
+      <span class="cbadge" id="cbadge">0</span>
+    </button>
+    <button class="hcta" onclick="goTo('shop')">SHOP NOW</button>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="h-grain"></div>
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="particles" id="particles"></div>
+  <div class="hero-body">
+    <div class="h-chip">PREMIUM NUTS · DRY FRUIT LADOOS · HANDMADE CHOCOLATES</div>
+    <h1 class="h-h1">Nourishing goodness,<em>made with restraint.</em></h1>
+    <p class="h-it">Because what you eat deserves to be honest.</p>
+    <p class="h-p">Hand-picked almonds, cashews and pistachios. Dry-fruit ladoos and chocolates made in small batches, with nothing added that doesn't need to be there. Kept fresh in reusable glass, delivered across Delhi & NCR.</p>
+    <div class="h-btns">
+      <button class="btn-pri" onclick="goTo('shop')">EXPLORE THE COLLECTION</button>
+      <button class="btn-ghost" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')">ORDER ON WHATSAPP</button>
+    </div>
+  </div>
+  <div class="h-stats">
+    <div style="text-align:center"><div class="h-stat-n">7</div><div class="h-stat-l">PREMIUM PRODUCTS</div></div>
+    <div style="text-align:center"><div class="h-stat-n">100%</div><div class="h-stat-l">GLASS PACKAGING</div></div>
+    <div style="text-align:center"><div class="h-stat-n">₹0</div><div class="h-stat-l">DELIVERY ABOVE ₹500</div></div>
+    <div style="text-align:center"><div class="h-stat-n">48h</div><div class="h-stat-l">DELHI & NCR</div></div>
+  </div>
+</section>
+
+<div class="mbar">
+  <div class="mtrack" id="mtrack"></div>
+</div>
+
+<div class="tbar reveal">
+  <div class="tbar-in">
+    <div class="titem"><i class="ti ti-flask"></i><div class="ttext"><strong>Borosilicate Glass</strong><span>Same glass used in laboratories</span></div></div>
+    <div class="titem"><i class="ti ti-leaf"></i><div class="ttext"><strong>No Plastic</strong><span>Zero plastic packaging ever</span></div></div>
+    <div class="titem"><i class="ti ti-shield-check"></i><div class="ttext"><strong>No Preservatives</strong><span>100% natural ingredients</span></div></div>
+    <div class="titem"><i class="ti ti-heart"></i><div class="ttext"><strong>Handcrafted</strong><span>Made in small batches with care</span></div></div>
+    <div class="titem"><i class="ti ti-truck"></i><div class="ttext"><strong>Delhi & NCR</strong><span>Free delivery above ₹500</span></div></div>
+  </div>
+</div>
+
+<section id="shop">
+  <div class="shop-hd reveal">
+    <div class="shop-title">
+      <h2>The Collection</h2>
+      <p>7 HANDCRAFTED PRODUCTS · ALL IN BOROSILICATE GLASS JARS</p>
+    </div>
+    <div class="filters" id="filters"></div>
+  </div>
+  <div class="pgrid" id="pgrid"></div>
+</section>
+
+<div class="glass-section reveal" id="glass-section">
+  <div class="glass-inner">
+    <span class="eyebrow">HOW WE KEEP IT THAT WAY</span>
+    <h2>Good Ingredients Deserve<br>a <em>Container That Doesn't Cheat Them</em></h2>
+    <p>Everything we make is kept in borosilicate glass — the same glass used in labs and hospitals. It doesn't leach chemicals, doesn't absorb odours, and doesn't quietly age your food the way plastic does. It's not the star of the show. It's just how we make sure the star stays exactly as good as the day we packed it.</p>
+    <div class="glass-cards">
+      <div class="gc"><i class="ti ti-flask"></i><h4>Lab-Grade Purity</h4><p>The same borosilicate glass used in medical equipment and scientific labs. Zero chemical leaching.</p></div>
+      <div class="gc"><i class="ti ti-temperature"></i><h4>Temperature Safe</h4><p>Handles extreme temperature changes. Safe to refrigerate, freeze, and bring to room temperature without cracking.</p></div>
+      <div class="gc"><i class="ti ti-recycle"></i><h4>Reuse Forever</h4><p>Each jar can be washed and reused hundreds of times. Store spices, organize your desk, or gift them empty.</p></div>
+      <div class="gc"><i class="ti ti-eye"></i><h4>See What You Buy</h4><p>Transparent glass means you see exactly what's inside before you open. No hidden quality surprises.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="substrip reveal">
+  <div class="substrip-in">
+    <small>NEVER RUN OUT OF YOUR FAVOURITES</small>
+    <h3>Subscribe & Save <em>15%</em></h3>
+    <p>Set a monthly delivery for your favourite nuts or ladoos. Pause or cancel anytime — no questions asked. Your jar comes to your door before you run out.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <button class="btn-pri" style="background:var(--g);color:var(--cream)" onclick="showAuth()">START SUBSCRIPTION</button>
+      <button class="btn-ghost" style="border-color:rgba(26,53,32,.3);color:var(--g)" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')">CHAT ON WHATSAPP</button>
+    </div>
+  </div>
+</div>
+
+<section id="story">
+  <div class="story-orb so1"></div><div class="story-orb so2"></div>
+  <div class="story-in reveal">
+    <span class="eyebrow">THE ROZVIK™ STORY</span>
+    <h2 class="story-h2">Good Food, Made<br><em>Without Shortcuts.</em></h2>
+    <p class="story-p">
+      ROZVIK™ started with a simple standard: if we wouldn't feed it to our own family without checking the label twice, we wouldn't sell it.
+      <br><br>
+      That's the whole idea. Every almond is hand-picked, every ladoo is rolled by hand in small batches, every chocolate is set the same week it's ordered — not sitting in a warehouse for months. No shortcuts, no fillers, no "natural flavour" doing the work real ingredients should.
+      <br><br>
+      We keep it all in reusable glass, because good food deserves a container as honest as what's inside it. But the glass was never the point. The food is.
+    </p>
+    <div class="founder">
+      <div class="founder-av"><i class="ti ti-user"></i></div>
+      <div>
+        <div class="founder-name">Divyesh Kaushik</div>
+        <div class="founder-role">FOUNDER, ROZVIK™</div>
+        <div class="founder-q">"Good food doesn't need shortcuts. Ours doesn't have any."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gift-section reveal" id="gifting">
+  <div class="gift-inner">
+    <span class="eyebrow">FOR SOMEONE WHO MATTERS</span>
+    <h2 class="gift-h2">Gifting, Done <em>Properly.</em></h2>
+    <p class="gift-p">A jar of ROZVIK, wrapped simply and sent with a card in your words — for a colleague, a parent, someone who just had a good year. No plastic hamper, no gift-basket clutter. Just something good, packed the way it deserves.</p>
+    <button class="btn-pri" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent('Hi ROZVIK! I want to send a gift jar.')}`, '_blank')">ARRANGE A GIFT ON WHATSAPP</button>
+  </div>
+</div>
+
+<footer>
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="fnm">ROZVIK</span>
+      <p>Premium nuts, dry fruit ladoos & handmade chocolates. Packed in borosilicate glass. Delivered to Delhi & NCR.</p>
+      <div class="socials">
+        <button class="socbtn" aria-label="Instagram" onclick="window.open(instaUrl, '_blank')"><i class="ti ti-brand-instagram"></i></button>
+        <button class="socbtn" aria-label="WhatsApp" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')"><i class="ti ti-brand-whatsapp"></i></button>
+        <button class="socbtn" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></button>
+        <button class="socbtn" aria-label="Email" onclick="window.open('mailto:support@rozvik.com')"><i class="ti ti-mail"></i></button>
+      </div>
+      <div class="ftig">
+        <div class="ftig-qr" id="ftIgQr"></div>
+        <span>Scan to follow <br><strong>@rozvik.co</strong></span>
+      </div>
+    </div>
+    <div class="ftcol"><h4>SHOP</h4><a onclick="goTo('shop')">All Products</a><a onclick="goTo('shop')">Premium Nuts</a><a onclick="goTo('shop')">Dry Fruit Ladoos</a><a onclick="goTo('shop')">Handmade Chocolates</a></div>
+    <div class="ftcol"><h4>ABOUT US</h4><a onclick="goTo('story')">Our Story</a><a onclick="goTo('glass-section')">Why Glass Jars</a><a onclick="goTo('gifting')">Gifting</a></div>
+    <div class="ftcol"><h4>SUPPORT</h4><a>Track Order</a><a>FAQ</a><a>Delivery Info</a><a>Returns</a><a onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')">WhatsApp Us</a></div>
+  </div>
+  <div class="ftbot">
+    <p class="ftcopy">© 2025 ROZVIK™ · rozvik.com · Delhi & NCR · Min. Order ₹300 · support@rozvik.com</p>
+    <div class="ftpays"><span class="ftpay">UPI</span><span class="ftpay">VISA</span><span class="ftpay">MASTERCARD</span><span class="ftpay">COD</span></div>
+  </div>
+</footer>
+
+<!-- CART -->
+<div class="cov" id="cov" onclick="toggleCart()"></div>
+<aside id="cpanel" role="dialog" aria-modal="true" aria-label="Shopping bag">
+  <div class="chd">
+    <h3>YOUR BAG</h3>
+    <button class="cx" onclick="toggleCart()"><i class="ti ti-x"></i></button>
+  </div>
+  <div class="cbody" id="cbody"></div>
+  <div class="cft" id="cft" style="display:none">
+    <div class="cmin" id="cmin"><i class="ti ti-info-circle"></i><span>Add ₹<strong id="cminleft">0</strong> more for free delivery</span></div>
+    <div class="crow"><span>Subtotal</span><span id="csub">₹0</span></div>
+    <div class="crow"><span>Delivery</span><span id="cdel">₹60</span></div>
+    <div class="crow tot"><span>Total</span><span id="ctot">₹0</span></div>
+    <p class="cdnote">Free delivery on orders above ₹500 · Delhi & NCR</p>
+    <button class="cwa-btn" onclick="whatsappOrder()"><i class="ti ti-brand-whatsapp"></i> ORDER VIA WHATSAPP</button>
+    <p class="cwa-note">Tap above — your order details go directly to us on WhatsApp. We confirm within 15 minutes.</p>
+    <div class="cpays"><span class="cpay">UPI</span><span class="cpay">VISA/MC</span><span class="cpay">COD</span></div>
+  </div>
+</aside>
+
+<!-- AUTH MODAL -->
+<div class="mwrap" id="authModal" role="dialog" aria-modal="true">
+  <div class="mbox">
+    <button class="mx" onclick="hideAuth()"><i class="ti ti-x"></i></button>
+    <div class="mtop"><span class="mlogo">ROZVIK</span><p class="msub">ORDER · SUBSCRIBE · TRACK</p></div>
+    <div class="mbody" id="authStep0">
+      <label class="flbl">PHONE NUMBER OR EMAIL</label>
+      <input class="finp" id="authInp" type="text" placeholder="+91 78384 36007 or email@example.com">
+      <button class="abtn solid" id="authSendBtn" onclick="requestOtp()">SEND OTP →</button>
+      <div style="text-align:center;font-size:10px;color:#C0B0A0;margin:10px 0">OR</div>
+      <button class="abtn wa" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank'); hideAuth()"><i class="ti ti-brand-whatsapp"></i> ORDER ON WHATSAPP</button>
+    </div>
+    <div class="mbody" id="authStep1" style="display:none">
+      <label class="flbl">ENTER THE 6-DIGIT CODE</label>
+      <p id="authSentTo" style="font-size:11px;color:var(--texts);margin-bottom:10px"></p>
+      <input class="finp" id="authOtpInp" type="text" inputmode="numeric" maxlength="6" placeholder="123456">
+      <button class="abtn solid" id="authVerifyBtn" onclick="verifyOtp()">VERIFY & LOG IN →</button>
+      <button class="abtn link" onclick="backToAuthStep0()">← Use a different number or email</button>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="mwrap" id="checkoutModal" role="dialog" aria-modal="true">
+  <div class="mbox" style="width:440px">
+    <button class="mx" onclick="closeCheckout()"><i class="ti ti-x"></i></button>
+    <div class="mtop"><span class="mlogo" style="font-size:18px;letter-spacing:3px">CHECKOUT</span><p class="msub">ROZVIK™ SECURE CHECKOUT</p></div>
+    <div class="csteps"><div class="cs on" onclick="chkStep(0)">1. ADDRESS</div><div class="cs" onclick="chkStep(1)">2. PAYMENT</div><div class="cs" onclick="chkStep(2)">3. DONE</div></div>
+    <div class="cstep on" id="cstep0">
+      <div class="cinrow"><div><label class="clabel">FULL NAME</label><input class="finp" id="chkName" placeholder="Your Name" style="margin-bottom:0"></div><div><label class="clabel">PHONE</label><input class="finp" placeholder="+91 98765 43210" id="chkPhone" style="margin-bottom:0"></div></div>
+      <div class="cinrow full" style="margin-top:10px"><label class="clabel">DELIVERY ADDRESS</label><input class="finp" id="chkAddr" placeholder="Flat / House No, Street, Area" style="margin-bottom:0"></div>
+      <div class="cinrow" style="margin-top:10px"><div><label class="clabel">CITY</label><input class="finp" id="chkCity" value="Delhi" style="margin-bottom:0"></div><div><label class="clabel">PINCODE</label><input class="finp" id="chkPin" placeholder="110001" style="margin-bottom:0"></div></div>
+      <button class="abtn solid" style="margin-top:16px" onclick="chkStep(1)">CONTINUE →</button>
+    </div>
+    <div class="cstep" id="cstep1">
+      <div class="pay-opts">
+        <button class="pay-opt sel" onclick="selPay(this)"><input type="radio" name="pay" checked><i class="ti ti-device-mobile" style="font-size:18px;color:var(--g)"></i><div><div style="font-weight:500">UPI</div><div style="font-size:10px;color:var(--texts)">GPay, PhonePe, Paytm, any UPI</div></div></button>
+        <button class="pay-opt" onclick="selPay(this)"><input type="radio" name="pay"><i class="ti ti-credit-card" style="font-size:18px;color:var(--g)"></i><div><div style="font-weight:500">Debit / Credit Card</div><div style="font-size:10px;color:var(--texts)">Visa, Mastercard, Amex, RuPay</div></div></button>
+        <button class="pay-opt" onclick="selPay(this)"><input type="radio" name="pay"><i class="ti ti-cash" style="font-size:18px;color:var(--g)"></i><div><div style="font-weight:500">Cash on Delivery</div><div style="font-size:10px;color:var(--texts)">Pay when your order arrives</div></div></button>
+      </div>
+      <div class="osm"><div class="osm-title">ORDER SUMMARY</div><div id="chkSummary"></div></div>
+      <button class="abtn solid" id="placeOrderBtn" onclick="placeOrder()">PLACE ORDER →</button>
+    </div>
+    <div class="cstep" id="cstep2" style="text-align:center;padding:28px 24px">
+      <div style="font-size:52px;margin-bottom:14px">✅</div>
+      <div style="font-family:var(--serif);font-size:22px;color:var(--g);margin-bottom:8px">Order Confirmed!</div>
+      <div id="chkOrderId" style="font-size:12px;font-weight:600;color:var(--g);margin-bottom:8px"></div>
+      <div style="font-size:12px;color:var(--texts);line-height:1.7;margin-bottom:14px">You'll get a WhatsApp confirmation on your number within 15 minutes.</div>
+      <div style="font-size:11px;background:#E8F4E8;color:#2A5A20;padding:10px 16px;border-radius:4px;border:1px solid #B8D8B8;margin-bottom:16px">Estimated delivery: 48 hours · Delhi & NCR</div>
+      <button class="abtn solid" onclick="closeCheckout();clearCart()">CONTINUE SHOPPING</button>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<button id="wabtn" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')" aria-label="Order on WhatsApp"><i class="ti ti-brand-whatsapp"></i></button>
+<div id="wapop">
+  <div class="watitle">Order on WhatsApp</div>
+  <div class="wasub">Chat with us directly — we respond within 15 minutes</div>
+  <div class="waqr" id="waqr"></div>
+  <button class="wacta" id="walink"><i class="ti ti-brand-whatsapp"></i> OPEN WHATSAPP</button>
+  <p class="wanum" id="wanum"></p>
+</div>
+
+<div id="toast"></div>
+
+<!-- PRODUCT DETAIL MODAL -->
+<div class="mwrap" id="productModal" role="dialog" aria-modal="true">
+  <div class="mbox" style="width:520px;max-height:90vh;overflow-y:auto">
+    <button class="mx" onclick="closeProductModal()"><i class="ti ti-x"></i></button>
+    <div style="padding:20px;background:var(--cream2)">
+      <img id="pmImg" src="" alt="Product" style="width:100%;height:300px;object-fit:cover;border-radius:6px;margin-bottom:16px">
+      <h2 id="pmName" style="font-family:var(--serif);font-size:28px;color:var(--g);margin-bottom:8px"></h2>
+      <p id="pmDesc" style="font-size:13px;color:var(--texts);line-height:1.8;margin-bottom:20px"></p>
+      <div style="margin-bottom:16px">
+        <div style="font-size:11px;color:var(--texts);letter-spacing:1px;margin-bottom:10px;font-weight:600">SELECT SIZE</div>
+        <div id="pmWeights" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"></div>
+      </div>
+      <button class="abtn solid" id="pmAddBtn" style="width:100%">ADD TO BAG</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
+
+
