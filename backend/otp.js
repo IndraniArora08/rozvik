@@ -8,16 +8,12 @@
 //   2. Customer types the code back → if it matches and hasn't
 //      expired, we log them in and hand back a session token.
 //
-//  IMPORTANT — before this goes live on the real website:
-//  Right now, sendOtp() below does NOT actually send a text
-//  message or email. It just prints the code to this server's
-//  terminal (and, only in dev mode, sends it back in the API
-//  response so you can test without a phone/email provider).
-//  To really send OTPs you need to sign up for:
-//    - An SMS provider for phone OTPs, e.g. MSG91 or Twilio
-//    - An email provider for email OTPs, e.g. Resend or SendGrid
-//  Then fill in the two TODO spots inside sendOtp() with their
-//  API call, using the API key from your provider account.
+//  Email OTPs are sent for real, via Resend (needs a
+//  RESEND_API_KEY environment variable — set on Render, not
+//  in this file). Mobile/SMS OTPs are NOT wired up yet — that
+//  still needs an SMS provider (e.g. MSG91) plus DLT
+//  registration in India, so for now they just log to the
+//  terminal like before.
 // ============================================================
 
 const crypto = require("crypto");
@@ -42,16 +38,48 @@ function generateCode() {
   return String(Math.floor(100000 + Math.random() * 900000)); // 6 digits
 }
 
-// Actually deliver the code. Replace the two TODOs with a real
-// provider call once you've signed up for one.
+// Send the code by email, using Resend's API directly (no extra
+// npm package needed — just a plain HTTP call).
+async function sendOtpEmail(identifier, code) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    // No key configured (e.g. running on your own machine) —
+    // just log it like before, so local testing still works.
+    console.log(`[DEV] Would email OTP ${code} to ${identifier}`);
+    return;
+  }
+
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: "ROZVIK <login@otp.rozvik.com>",
+      to: [identifier],
+      subject: "Your ROZVIK login code",
+      text: `Your ROZVIK login code is ${code}. It expires in 5 minutes.`,
+    }),
+  });
+
+  if (!res.ok) {
+    const errText = await res.text();
+    console.error("Resend API error:", res.status, errText);
+  }
+}
+
+// Actually deliver the code.
 function sendOtp(identifier, code) {
   if (isEmail(identifier)) {
-    // TODO: send an email here, e.g. using Resend:
-    //   await resend.emails.send({ to: identifier, subject: "Your ROZVIK code", text: `Your code is ${code}` });
-    console.log(`[DEV] Would email OTP ${code} to ${identifier}`);
+    // Fire-and-forget: the API response doesn't need to wait on
+    // the email actually being delivered.
+    sendOtpEmail(identifier, code).catch((err) =>
+      console.error("Failed to send OTP email:", err)
+    );
   } else {
-    // TODO: send an SMS here, e.g. using MSG91/Twilio:
-    //   await smsProvider.send({ to: identifier, message: `Your ROZVIK code is ${code}` });
+    // TODO: SMS not wired up yet — needs an SMS provider (e.g.
+    // MSG91) and DLT registration in India first.
     console.log(`[DEV] Would SMS OTP ${code} to ${identifier}`);
   }
 }

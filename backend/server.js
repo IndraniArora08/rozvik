@@ -64,4 +64,6 @@ app.listen(CONFIG.port, () => {
   console.log(`ROZVIK backend running at http://localhost:${CONFIG.port}`);
   console.log(`  Products:  http://localhost:${CONFIG.port}/api/products`);
   console.log(`  Health:    http://localhost:${CONFIG.port}/api/health`);
+  // Diagnostic only — never logs the actual key, just whether it's set.
+  console.log(`  RESEND_API_KEY configured: ${!!process.env.RESEND_API_KEY}`);
 });
