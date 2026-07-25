@@ -104,20 +104,11 @@ button{cursor:pointer;font-family:var(--sans)}
 @keyframes cardIn{to{opacity:1;transform:translateY(0)}}
 .pcard:hover{border-color:rgba(200,153,26,.5);transform:translateY(-4px);box-shadow:0 14px 40px rgba(26,53,32,.13)}
 
-/* Glass jar visual */
+/* Product photo */
 .pimg{height:170px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.jar-wrap{position:relative;display:flex;flex-direction:column;align-items:center;transition:transform .3s var(--ease)}
-.pcard:hover .jar-wrap{transform:scale(1.06) rotate(-1deg)}
-.jar{width:82px;height:110px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
-/* Glass jar shape using CSS */
-.jar-body{width:76px;height:88px;background:rgba(230,240,255,.45);border:1.5px solid rgba(255,255,255,.7);border-radius:6px 6px 14px 14px;position:relative;overflow:hidden;box-shadow:inset 2px 0 8px rgba(255,255,255,.35),inset -2px 0 4px rgba(0,0,0,.06),2px 4px 16px rgba(0,0,0,.15);backdrop-filter:blur(2px)}
-.jar-fill{position:absolute;bottom:0;left:0;right:0;border-radius:0 0 12px 12px}
-.jar-shine{position:absolute;top:6px;left:8px;width:12px;height:60px;background:linear-gradient(180deg,rgba(255,255,255,.5) 0%,rgba(255,255,255,.0) 100%);border-radius:6px;pointer-events:none}
-.jar-label{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:54px;background:rgba(26,53,32,.88);border-radius:3px;padding:4px 4px 3px;text-align:center}
-.jar-label .jbrand{font-family:var(--serif);font-size:7px;color:rgba(200,153,26,.9);letter-spacing:2px;display:block}
-.jar-label .jname{font-size:7.5px;color:#F5EFE2;font-weight:500;letter-spacing:.5px;display:block;margin-top:1px;line-height:1.2}
-.jar-lid{width:82px;height:16px;background:linear-gradient(180deg,#C8991A 0%,#9A7010 100%);border-radius:4px 4px 2px 2px;border:1px solid rgba(200,153,26,.5);margin-bottom:2px;display:flex;align-items:center;justify-content:center}
-.jar-lid span{font-family:var(--serif);font-size:6px;color:rgba(245,239,226,.8);letter-spacing:1.5px}
+.prod-wrap{width:140px;height:140px;border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(26,53,32,.16);cursor:pointer;transition:transform .3s var(--ease)}
+.pcard:hover .prod-wrap{transform:scale(1.05)}
+.prod-img{width:100%;height:100%;object-fit:cover;display:block}
 .pbadge{position:absolute;font-size:7.5px;letter-spacing:1.2px;padding:2.5px 7px;border-radius:2px}
 .pbadge.grade{top:9px;right:9px;background:var(--g);color:var(--gold);border:1px solid rgba(200,153,26,.25)}
 .pbadge.isnew{top:9px;left:9px;background:var(--gold);color:var(--g);font-weight:700}
@@ -303,6 +294,7 @@ footer{background:#080F07;padding:48px clamp(16px,3vw,40px) 22px}
 .ftig-qr img{display:block;width:100%;height:100%}
 .ftig span{font-size:10.5px;color:rgba(155,184,152,.5);line-height:1.6}
 .ftig strong{color:var(--gold);font-weight:500}
+.fttrust{font-size:9.5px;color:rgba(155,184,152,.4);line-height:1.7;margin-top:16px;max-width:230px}
 .ftcol h4{font-size:9.5px;color:var(--gold);letter-spacing:2.5px;margin-bottom:14px}
 .ftcol a{display:block;font-size:11px;color:rgba(155,184,152,.45);margin-bottom:9px;cursor:pointer;transition:color .18s}
 .ftcol a:hover{color:var(--cream)}
