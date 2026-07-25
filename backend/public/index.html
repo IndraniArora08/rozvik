@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="ROZVIK™ — Premium nuts, dry fruit ladoos & handmade chocolates in borosilicate glass jars.">
+<meta name="description" content="ROZVIK™ — Hand-selected premium cashews, almonds, pistachios, walnuts and raisins. No shortcuts, no fillers.">
 <meta name="theme-color" content="#1A3520">
 <meta property="og:title" content="ROZVIK™ — Pure. Premium. Handcrafted.">
-<meta property="og:description" content="Premium nuts, dry fruit ladoos & handmade chocolates. Packed in borosilicate glass jars. Delivered to Delhi & NCR.">
+<meta property="og:description" content="Hand-selected premium cashews, almonds, pistachios, walnuts and raisins. No shortcuts, no fillers. Delivered to Delhi & NCR.">
 <title>ROZVIK™ — Pure. Premium. Handcrafted.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
   </div>
   <nav class="hnav">
     <button onclick="goTo('shop')">Shop</button>
-    <button onclick="goTo('glass-section')">Why Glass Jars</button>
+    <button onclick="goTo('gifting')">Gifting</button>
     <button onclick="goTo('story')">Our Story</button>
     <button onclick="showAuth()">Order Now</button>
   </nav>
@@ -43,18 +43,18 @@
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
   <div class="particles" id="particles"></div>
   <div class="hero-body">
-    <div class="h-chip">PREMIUM NUTS · DRY FRUIT LADOOS · HANDMADE CHOCOLATES</div>
+    <div class="h-chip">CASHEWS · ALMONDS · PISTACHIOS · WALNUTS · RAISINS</div>
     <h1 class="h-h1">Nourishing goodness,<em>made with restraint.</em></h1>
     <p class="h-it">Because what you eat deserves to be honest.</p>
-    <p class="h-p">Hand-picked almonds, cashews and pistachios. Dry-fruit ladoos and chocolates made in small batches, with nothing added that doesn't need to be there. Kept fresh in reusable glass, delivered across Delhi & NCR.</p>
+    <p class="h-p">Hand-selected cashews, almonds, pistachios, walnuts and raisins, with nothing added that doesn't need to be there. Delivered fresh across Delhi & NCR.</p>
     <div class="h-btns">
       <button class="btn-pri" onclick="goTo('shop')">EXPLORE THE COLLECTION</button>
       <button class="btn-ghost" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')">ORDER ON WHATSAPP</button>
     </div>
   </div>
   <div class="h-stats">
-    <div style="text-align:center"><div class="h-stat-n">7</div><div class="h-stat-l">PREMIUM PRODUCTS</div></div>
-    <div style="text-align:center"><div class="h-stat-n">100%</div><div class="h-stat-l">GLASS PACKAGING</div></div>
+    <div style="text-align:center"><div class="h-stat-n">5</div><div class="h-stat-l">PREMIUM PRODUCTS</div></div>
+    <div style="text-align:center"><div class="h-stat-n">0</div><div class="h-stat-l">PRESERVATIVES ADDED</div></div>
     <div style="text-align:center"><div class="h-stat-n">₹0</div><div class="h-stat-l">DELIVERY ABOVE ₹500</div></div>
     <div style="text-align:center"><div class="h-stat-n">48h</div><div class="h-stat-l">DELHI & NCR</div></div>
   </div>
@@ -66,10 +66,10 @@
 
 <div class="tbar reveal">
   <div class="tbar-in">
-    <div class="titem"><i class="ti ti-flask"></i><div class="ttext"><strong>Borosilicate Glass</strong><span>Same glass used in laboratories</span></div></div>
-    <div class="titem"><i class="ti ti-leaf"></i><div class="ttext"><strong>No Plastic</strong><span>Zero plastic packaging ever</span></div></div>
+    <div class="titem"><i class="ti ti-award"></i><div class="ttext"><strong>FSSAI Licensed</strong><span>Lic. No. 22726393000760</span></div></div>
+    <div class="titem"><i class="ti ti-hand-stop"></i><div class="ttext"><strong>Hand-Selected</strong><span>Every batch checked by hand</span></div></div>
     <div class="titem"><i class="ti ti-shield-check"></i><div class="ttext"><strong>No Preservatives</strong><span>100% natural ingredients</span></div></div>
-    <div class="titem"><i class="ti ti-heart"></i><div class="ttext"><strong>Handcrafted</strong><span>Made in small batches with care</span></div></div>
+    <div class="titem"><i class="ti ti-heart"></i><div class="ttext"><strong>Kept Honest</strong><span>No fillers, no shortcuts</span></div></div>
     <div class="titem"><i class="ti ti-truck"></i><div class="ttext"><strong>Delhi & NCR</strong><span>Free delivery above ₹500</span></div></div>
   </div>
 </div>
@@ -78,32 +78,18 @@
   <div class="shop-hd reveal">
     <div class="shop-title">
       <h2>The Collection</h2>
-      <p>7 HANDCRAFTED PRODUCTS · ALL IN BOROSILICATE GLASS JARS</p>
+      <p>5 HAND-SELECTED, PREMIUM DRY FRUITS</p>
     </div>
     <div class="filters" id="filters"></div>
   </div>
   <div class="pgrid" id="pgrid"></div>
 </section>
 
-<div class="glass-section reveal" id="glass-section">
-  <div class="glass-inner">
-    <span class="eyebrow">HOW WE KEEP IT THAT WAY</span>
-    <h2>Good Ingredients Deserve<br>a <em>Container That Doesn't Cheat Them</em></h2>
-    <p>Everything we make is kept in borosilicate glass — the same glass used in labs and hospitals. It doesn't leach chemicals, doesn't absorb odours, and doesn't quietly age your food the way plastic does. It's not the star of the show. It's just how we make sure the star stays exactly as good as the day we packed it.</p>
-    <div class="glass-cards">
-      <div class="gc"><i class="ti ti-flask"></i><h4>Lab-Grade Purity</h4><p>The same borosilicate glass used in medical equipment and scientific labs. Zero chemical leaching.</p></div>
-      <div class="gc"><i class="ti ti-temperature"></i><h4>Temperature Safe</h4><p>Handles extreme temperature changes. Safe to refrigerate, freeze, and bring to room temperature without cracking.</p></div>
-      <div class="gc"><i class="ti ti-recycle"></i><h4>Reuse Forever</h4><p>Each jar can be washed and reused hundreds of times. Store spices, organize your desk, or gift them empty.</p></div>
-      <div class="gc"><i class="ti ti-eye"></i><h4>See What You Buy</h4><p>Transparent glass means you see exactly what's inside before you open. No hidden quality surprises.</p></div>
-    </div>
-  </div>
-</div>
-
 <div class="substrip reveal">
   <div class="substrip-in">
     <small>NEVER RUN OUT OF YOUR FAVOURITES</small>
     <h3>Subscribe & Save <em>15%</em></h3>
-    <p>Set a monthly delivery for your favourite nuts or ladoos. Pause or cancel anytime — no questions asked. Your jar comes to your door before you run out.</p>
+    <p>Set a monthly delivery for your favourite nuts. Pause or cancel anytime — no questions asked. Your order comes to your door before you run out.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
       <button class="btn-pri" style="background:var(--g);color:var(--cream)" onclick="showAuth()">START SUBSCRIPTION</button>
       <button class="btn-ghost" style="border-color:rgba(26,53,32,.3);color:var(--g)" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')">CHAT ON WHATSAPP</button>
@@ -119,9 +105,9 @@
     <p class="story-p">
       ROZVIK™ started with a simple standard: if we wouldn't feed it to our own family without checking the label twice, we wouldn't sell it.
       <br><br>
-      That's the whole idea. Every almond is hand-picked, every ladoo is rolled by hand in small batches, every chocolate is set the same week it's ordered — not sitting in a warehouse for months. No shortcuts, no fillers, no "natural flavour" doing the work real ingredients should.
+      That's the whole idea. Every almond, every cashew, every handful of pistachios is hand-selected in small batches — not sitting in a warehouse for months. No shortcuts, no fillers, no "natural flavour" doing the work real ingredients should.
       <br><br>
-      We keep it all in reusable glass, because good food deserves a container as honest as what's inside it. But the glass was never the point. The food is.
+      We keep it honest right down to the packaging, because good food deserves care at every step. But the packaging was never the point. The food is.
     </p>
     <div class="founder">
       <div class="founder-av"><i class="ti ti-user"></i></div>
@@ -138,8 +124,8 @@
   <div class="gift-inner">
     <span class="eyebrow">FOR SOMEONE WHO MATTERS</span>
     <h2 class="gift-h2">Gifting, Done <em>Properly.</em></h2>
-    <p class="gift-p">A jar of ROZVIK, wrapped simply and sent with a card in your words — for a colleague, a parent, someone who just had a good year. No plastic hamper, no gift-basket clutter. Just something good, packed the way it deserves.</p>
-    <button class="btn-pri" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent('Hi ROZVIK! I want to send a gift jar.')}`, '_blank')">ARRANGE A GIFT ON WHATSAPP</button>
+    <p class="gift-p">A pack of ROZVIK, wrapped simply and sent with a card in your words — for a colleague, a parent, someone who just had a good year. No plastic hamper, no gift-basket clutter. Just something good.</p>
+    <button class="btn-pri" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent('Hi ROZVIK! I want to send a gift.')}`, '_blank')">ARRANGE A GIFT ON WHATSAPP</button>
   </div>
 </div>
 
@@ -147,24 +133,25 @@
   <div class="ftgrid">
     <div class="ftbrand">
       <span class="fnm">ROZVIK</span>
-      <p>Premium nuts, dry fruit ladoos & handmade chocolates. Packed in borosilicate glass. Delivered to Delhi & NCR.</p>
+      <p>Hand-selected premium nuts and dry fruits. No shortcuts, no fillers. Delivered to Delhi & NCR.</p>
       <div class="socials">
         <button class="socbtn" aria-label="Instagram" onclick="window.open(instaUrl, '_blank')"><i class="ti ti-brand-instagram"></i></button>
         <button class="socbtn" aria-label="WhatsApp" onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')"><i class="ti ti-brand-whatsapp"></i></button>
         <button class="socbtn" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></button>
-        <button class="socbtn" aria-label="Email" onclick="window.open('mailto:support@rozvik.com')"><i class="ti ti-mail"></i></button>
+        <button class="socbtn" aria-label="Email" onclick="window.open('mailto:care@rozvik.com')"><i class="ti ti-mail"></i></button>
       </div>
       <div class="ftig">
         <div class="ftig-qr" id="ftIgQr"></div>
         <span>Scan to follow <br><strong>@rozvik.co</strong></span>
       </div>
+      <p class="fttrust">FSSAI Lic. No. 22726393000760<br>Rozvik & Co., A to Z Road, Almaspur, Bhagirath Chowk, Muzaffarnagar, Uttar Pradesh - 251001</p>
     </div>
-    <div class="ftcol"><h4>SHOP</h4><a onclick="goTo('shop')">All Products</a><a onclick="goTo('shop')">Premium Nuts</a><a onclick="goTo('shop')">Dry Fruit Ladoos</a><a onclick="goTo('shop')">Handmade Chocolates</a></div>
-    <div class="ftcol"><h4>ABOUT US</h4><a onclick="goTo('story')">Our Story</a><a onclick="goTo('glass-section')">Why Glass Jars</a><a onclick="goTo('gifting')">Gifting</a></div>
+    <div class="ftcol"><h4>SHOP</h4><a onclick="goTo('shop')">All Products</a><a onclick="goTo('shop')">Cashews</a><a onclick="goTo('shop')">Almonds</a><a onclick="goTo('shop')">Pistachios</a></div>
+    <div class="ftcol"><h4>ABOUT US</h4><a onclick="goTo('story')">Our Story</a><a onclick="goTo('gifting')">Gifting</a></div>
     <div class="ftcol"><h4>SUPPORT</h4><a>Track Order</a><a>FAQ</a><a>Delivery Info</a><a>Returns</a><a onclick="window.open(`https://wa.me/${CFG.waNumber}?text=${encodeURIComponent(CFG.waMessage)}`, '_blank')">WhatsApp Us</a></div>
   </div>
   <div class="ftbot">
-    <p class="ftcopy">© 2025 ROZVIK™ · rozvik.com · Delhi & NCR · Min. Order ₹300 · support@rozvik.com</p>
+    <p class="ftcopy">© 2025 ROZVIK™ · rozvik.com · Delhi & NCR · Min. Order ₹300 · care@rozvik.com</p>
     <div class="ftpays"><span class="ftpay">UPI</span><span class="ftpay">VISA</span><span class="ftpay">MASTERCARD</span><span class="ftpay">COD</span></div>
   </div>
 </footer>
