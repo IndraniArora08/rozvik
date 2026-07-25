@@ -20,69 +20,53 @@ const instaUrl = `https://www.instagram.com/${CFG.instaHandle}/`;
    ================================================================ */
 const PRODUCTS = [
   {
-    id:1, name:"California Almonds", tagline:"Premium Grade · Lightly Salted Available",
-    cat:"Nuts", grade:"PREMIUM", isNew:false,
-    desc:"Large, plump California almonds sourced directly. Rich in protein and healthy fats. Available natural or lightly salted. Locked in freshness with borosilicate glass.",
-    img:"https://images.unsplash.com/photo-1585518419759-6e4ce9f22e3b?w=400",
-    fillColor:"#C8A882", fillH:"65%", icon:"ti-circle", pkgText:"#5A3A18",
-    wts:[{w:"100g",p:199},{w:"250g",p:449},{w:"500g",p:849},{w:"1kg",p:1599}]
-  },
-  {
-    id:2, name:"Premium Cashews", tagline:"W240 Grade · Whole Kernels",
-    cat:"Nuts", grade:"W240 GRADE", isNew:false,
-    desc:"W240 whole cashew kernels — the grade exported to premium markets. Creamy, buttery, and consistently sized. Each jar is filled with hand-sorted, unbroken whole kernels only.",
+    id:1, name:"Cashew Kernels", tagline:"W210 Grade · Hand-Selected Jumbo",
+    cat:"Nuts", grade:"W210 GRADE", isNew:false,
+    desc:"Hand-selected jumbo W210 cashew kernels. Creamy, buttery, and consistently sized — no broken pieces, no fillers, just the whole kernel.",
     img:"https://images.unsplash.com/photo-1599599810694-b3f5fa33f35f?w=400",
     fillColor:"#E8D4A0", fillH:"70%", icon:"ti-circle", pkgText:"#5A4818",
-    wts:[{w:"100g",p:249},{w:"250g",p:569},{w:"500g",p:1049},{w:"1kg",p:1999}]
+    wts:[{w:"250g",p:569}]
   },
   {
-    id:3, name:"Golden Raisins", tagline:"Sun-Dried · Seedless · Jumbo",
-    cat:"Nuts", grade:"JUMBO GRADE", isNew:false,
-    desc:"Jumbo golden raisins, sun-dried and naturally sweet. No added sugar, no sulphites, no artificial colour. The golden hue comes entirely from the natural drying process.",
-    img:"https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
-    fillColor:"#D4A840", fillH:"75%", icon:"ti-sun", pkgText:"#5A3810",
-    wts:[{w:"100g",p:129},{w:"250g",p:289},{w:"500g",p:549},{w:"1kg",p:999}]
+    id:2, name:"California Almonds", tagline:"Premium Grade · Hand-Picked",
+    cat:"Nuts", grade:"PREMIUM", isNew:false,
+    desc:"Large, plump California almonds, hand-picked and kept honest — no fillers, no shortcuts. Rich in protein and healthy fats.",
+    img:"https://images.unsplash.com/photo-1585518419759-6e4ce9f22e3b?w=400",
+    fillColor:"#C8A882", fillH:"65%", icon:"ti-circle", pkgText:"#5A3A18",
+    wts:[{w:"275g",p:459}]
   },
   {
-    id:4, name:"Iranian Pistachios", tagline:"Long Pista · Roasted & Salted",
+    id:3, name:"Iranian Pistachios", tagline:"Premium Grade · Roasted & Salted",
     cat:"Nuts", grade:"PREMIUM GRADE", isNew:true,
-    desc:"Long Iranian pistachios, roasted in small batches and lightly salted. Naturally open-shelled, rich green kernel, intense flavour. The snacking pistachio that sets the standard.",
+    desc:"Iranian pistachios, roasted in small batches and lightly salted. Naturally open-shelled, rich green kernel, intense flavour.",
     img:"https://images.unsplash.com/photo-1599599810694-b3f5fa33f35f?w=400",
     fillColor:"#8A9A60", fillH:"60%", icon:"ti-leaf", pkgText:"#2A4010",
-    wts:[{w:"100g",p:349},{w:"250g",p:799},{w:"500g",p:1499},{w:"1kg",p:2799}]
+    wts:[{w:"200g",p:559}]
   },
   {
-    id:5, name:"Kashmiri Walnuts", tagline:"Light Halves · Kashmir Origin",
+    id:4, name:"Kashmiri Walnuts", tagline:"Light Halves · Kashmir Origin",
     cat:"Nuts", grade:"LIGHT HALVES", isNew:false,
-    desc:"Light coloured walnut halves from the Kashmir valley — the variety known for mild bitterness and rich omega-3 content. Hand-cracked to preserve the half-kernel shape. No broken pieces in this jar.",
+    desc:"Light-coloured walnut halves from the Kashmir valley, hand-cracked to preserve the half-kernel shape. No broken pieces in this pack.",
     img:"https://images.unsplash.com/photo-1585518419759-6e4ce9f22e3b?w=400",
     fillColor:"#C8A878", fillH:"68%", icon:"ti-circle-dotted", pkgText:"#4A2A10",
-    wts:[{w:"100g",p:279},{w:"250g",p:629},{w:"500g",p:1199},{w:"1kg",p:2299}]
+    wts:[{w:"150g",p:309}]
   },
   {
-    id:6, name:"Dry Fruit Ladoo", tagline:"Handmade · No Sugar Added",
-    cat:"Ladoos", grade:"HANDMADE", isNew:true,
-    desc:"Handmade ladoos crafted from dates, almonds, cashews, pistachios and desiccated coconut. No refined sugar, no artificial binding agents. Each ladoo is rolled by hand and sealed fresh in glass.",
-    img:"https://images.unsplash.com/photo-1599599810694-b3f5fa33f35f?w=400",
-    fillColor:"#8A6040", fillH:"72%", icon:"ti-heart", pkgText:"#3A1A08",
-    wts:[{w:"150g (4 pc)",p:299},{w:"300g (8 pc)",p:549},{w:"500g (14 pc)",p:899},{w:"1kg (28 pc)",p:1649}]
-  },
-  {
-    id:7, name:"Handmade Chocolates", tagline:"Artisan · 3 Varieties Available",
-    cat:"Chocolates", grade:"ARTISAN", isNew:true,
-    desc:"Small-batch handmade chocolates in dark (70%), milk, and assorted varieties. Made with quality couverture chocolate and stuffed with dry fruit. No wax coating, no artificial flavour. Each piece individually set.",
-    img:"https://images.unsplash.com/photo-1599599810694-b3f5fa33f35f?w=400",
-    fillColor:"#4A2A10", fillH:"78%", icon:"ti-star", pkgText:"#1A0A04",
-    wts:[{w:"100g (~8 pc)",p:299},{w:"200g (~16 pc)",p:549},{w:"400g (~32 pc)",p:999},{w:"1kg (~80 pc)",p:2399}]
+    id:5, name:"Golden Raisins", tagline:"Sun-Dried · Seedless · Jumbo",
+    cat:"Nuts", grade:"JUMBO GRADE", isNew:false,
+    desc:"Jumbo golden raisins, sun-dried and naturally sweet. No added sugar, no sulphites, no artificial colour.",
+    img:"https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
+    fillColor:"#D4A840", fillH:"75%", icon:"ti-sun", pkgText:"#5A3810",
+    wts:[{w:"250g",p:169}]
   },
 ];
 
-const CATS = ["All","Nuts","Ladoos","Chocolates"];
+const CATS = ["All","Nuts"];
 const MARQUEE_ITEMS = [
-  ["ti-flask","Borosilicate Glass Jars"],["ti-leaf","No Plastic Packaging"],
-  ["ti-shield-check","No Preservatives"],["ti-heart","Handcrafted in Small Batches"],
+  ["ti-award","FSSAI Licensed"],["ti-leaf","No Preservatives"],
+  ["ti-shield-check","Hand-Selected Batches"],["ti-heart","Kept Honest, No Fillers"],
   ["ti-truck","Delhi & NCR Delivery"],["ti-star","Premium Quality Nuts"],
-  ["ti-recycle","Reusable Glass Jars"],["ti-award","Pure. Premium. Handcrafted."],
+  ["ti-award","Nourishing Goodness, Made With Restraint"],
 ];
 
 /* ── STATE ── */
@@ -114,22 +98,11 @@ function buildFilters() {
 }
 function setFilter(c) { S.filter=c; buildFilters(); renderGrid(); }
 
-/* ── JAR VISUAL ── */
-function jarHTML(p, wi) {
+/* ── PRODUCT VISUAL ── */
+function productVisual(p) {
   return `
-  <div class="jar-wrap" onclick="openProductModal(${p.id})">
-    <div class="jar">
-      <div class="jar-lid"><span>ROZVIK™</span></div>
-      <div class="jar-body">
-        <img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:4px 4px 8px 8px;" onerror="this.style.display='none'">
-        <div class="jar-fill" style="height:${p.fillH};background:${p.fillColor}20;border-top:2px solid ${p.fillColor}40;display:none"></div>
-        <div class="jar-shine"></div>
-        <div class="jar-label">
-          <span class="jbrand">ROZVIK</span>
-          <span class="jname">${p.name.split(' ').slice(0,2).join(' ').toUpperCase()}</span>
-        </div>
-      </div>
-    </div>
+  <div class="prod-wrap" onclick="openProductModal(${p.id})">
+    <img class="prod-img" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'">
   </div>`;
 }
 
@@ -145,7 +118,7 @@ function renderGrid() {
   <div class="pimg" style="background:linear-gradient(135deg,${p.fillColor}18,${p.fillColor}08)">
     ${p.isNew?`<span class="pbadge isnew">NEW</span>`:''}
     <span class="pbadge grade">${p.grade}</span>
-    ${jarHTML(p, wi)}
+    ${productVisual(p)}
   </div>
   <div class="pbody">
     <div class="pname">${p.name}</div>
@@ -175,7 +148,7 @@ function selWt(pid, idx) {
   S.selWt[pid]=idx;
   const p=PRODUCTS.find(x=>x.id===pid);
   document.getElementById('ppr_'+pid).textContent='₹'+p.wts[idx].p;
-  document.getElementById('ppw_'+pid).textContent=p.wts[idx].w+' · glass jar';
+  document.getElementById('ppw_'+pid).textContent=p.wts[idx].w;
   document.querySelectorAll(`#wr_${pid} .wpill`).forEach((b,i)=>{b.className='wpill'+(i===idx?' on':'')});
 }
 
@@ -227,7 +200,7 @@ function updateCart() {
       </div>
       <div class="cinfo">
         <div class="cname">${x.name}</div>
-        <div class="cmeta">${x.wt} · Glass jar · ₹${x.price}/jar</div>
+        <div class="cmeta">${x.wt} · ₹${x.price}/pack</div>
         <div class="cqty">
           <button class="qb" onclick="changeQty(${x.pid},-1)">−</button>
           <span style="font-size:12px;min-width:20px;text-align:center">${x.qty}</span>
@@ -484,7 +457,9 @@ function openProductModal(pid){
   document.getElementById('pmName').textContent=p.name;
   document.getElementById('pmDesc').textContent=p.desc;
   const wtHtml=p.wts.map((w,i)=>`<button class="weight-opt" data-idx="${i}" onclick="selWeight(${pid},${i})">${w.w}<br><span>₹${w.p}</span></button>`).join('');
-  document.getElementById('pmWeights').innerHTML=wtHtml;
+  const pmWeights=document.getElementById('pmWeights');
+  pmWeights.innerHTML=wtHtml;
+  pmWeights.style.gridTemplateColumns=`repeat(${Math.min(p.wts.length,2)},1fr)`;
   document.querySelectorAll('.weight-opt')[0].classList.add('sel');
   document.getElementById('pmAddBtn').onclick=()=>{addToCart(pid);closeProductModal();};
   modal.classList.add('on');
