@@ -44,7 +44,7 @@ const PRODUCTS = [
     wts:[{w:"200g",p:559}]
   },
   {
-    id:4, name:"Kashmiri Walnuts", tagline:"Light Halves · Kashmir Origin",
+    id:4, name:"Walnuts", tagline:"Light Halves · Kashmir Origin",
     cat:"Nuts", grade:"LIGHT HALVES", isNew:false,
     desc:"Light-coloured walnut halves from the Kashmir valley, hand-cracked to preserve the half-kernel shape. No broken pieces in this pack.",
     img:"https://images.unsplash.com/photo-1585518419759-6e4ce9f22e3b?w=400",
@@ -57,7 +57,7 @@ const PRODUCTS = [
     desc:"Jumbo golden raisins, sun-dried and naturally sweet. No added sugar, no sulphites, no artificial colour.",
     img:"https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
     fillColor:"#D4A840", fillH:"75%", icon:"ti-sun", pkgText:"#5A3810",
-    wts:[{w:"250g",p:169}]
+    wts:[{w:"250g",p:179}]
   },
 ];
 
