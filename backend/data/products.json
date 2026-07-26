@@ -46,7 +46,7 @@
   },
   {
     "id": 4,
-    "name": "Kashmiri Walnuts",
+    "name": "Walnuts",
     "tagline": "Light Halves · Kashmir Origin",
     "cat": "Nuts",
     "grade": "LIGHT HALVES",
@@ -72,6 +72,6 @@
     "fillH": "75%",
     "icon": "ti-sun",
     "pkgText": "#5A3810",
-    "wts": [{ "w": "250g", "p": 169 }]
+    "wts": [{ "w": "250g", "p": 179 }]
   }
 ]
