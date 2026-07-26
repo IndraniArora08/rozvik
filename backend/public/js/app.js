@@ -426,6 +426,26 @@ function toggleWa(){
   S.waOpen=!S.waOpen;
   document.getElementById('wapop').classList.toggle('open',S.waOpen);
 }
+
+/* ── EMAIL ICON ──
+   Try the visitor's own default mail app first (mailto:). There's
+   no way for a website to know for sure whether that worked, so we
+   use a common trick: if the browser tab loses focus shortly after
+   (a sign some app opened over it), assume it worked. If the tab is
+   still focused after a short wait, assume nothing handled it and
+   fall back to opening Gmail's compose window instead. */
+function openEmail(address){
+  let handled=false;
+  const onBlur=()=>{ handled=true; };
+  window.addEventListener('blur',onBlur,{once:true});
+  window.location.href='mailto:'+address;
+  setTimeout(()=>{
+    window.removeEventListener('blur',onBlur);
+    if(!handled){
+      window.open('https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(address),'_blank');
+    }
+  },1200);
+}
 document.addEventListener('click',e=>{
   if(!e.target.closest('#wabtn')&&!e.target.closest('#wapop')){S.waOpen=false;document.getElementById('wapop').classList.remove('open');}
 });
